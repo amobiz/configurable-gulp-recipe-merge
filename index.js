@@ -1,6 +1,6 @@
 'use strict';
 
-var helper = require('configurable-gulp-helper');
+var helper = require('gulp-ccr-helper');
 var verify = helper.verifyStreamPrerequisite('merge');
 
 /**

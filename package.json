@@ -1,5 +1,5 @@
 {
-  "name": "configurable-gulp-recipe-merge",
+  "name": "gulp-ccr-merge",
   "version": "0.1.0",
   "description": "Configurable gulp recipe plugin that merge multiple streams into one interleaved stream.",
   "main": "index.js",
@@ -8,9 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amobiz/configurable-gulp-recipe-merge.git"
+    "url": "git+https://github.com/gulp-ccr/gulp-ccr-merge.git"
   },
   "keywords": [
+    "gulp",
+    "gulp 4.0",
+    "gulp-ccr",
     "configurable-gulp-recipe",
     "configurable-gulp-recipes",
     "stream",
@@ -27,15 +30,15 @@
   "author": "Amobiz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amobiz/configurable-gulp-recipe-merge/issues"
+    "url": "https://github.com/gulp-ccr/gulp-ccr-merge/issues"
   },
-  "homepage": "https://github.com/amobiz/configurable-gulp-recipe-merge#readme",
+  "homepage": "https://github.com/gulp-ccr/gulp-ccr-merge#readme",
   "devDependencies": {
     "mocha": "^2.3.4",
     "mocha-cases": "^0.1.4"
   },
   "dependencies": {
-    "configurable-gulp-helper": "git+https://github.com/amobiz/configurable-gulp-helper.git",
+    "gulp-ccr-helper": "git+https://github.com/gulp-ccr/gulp-ccr-helper.git",
     "gulp-util": "^3.0.7",
     "merge-stream": "^1.0.0"
   }
