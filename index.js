@@ -21,9 +21,8 @@ function merge() {
 	// lazy loading required modules.
 	var mergeStream = require('merge-stream');
 
-	var context = this,
-		tasks = context.tasks,
-		runTask = verify(context);
+	var tasks = this.tasks;
+	var runTask = verify(this);
 
 	if (tasks.length === 1) {
 		return runTask(tasks[0]);
@@ -35,9 +34,9 @@ function merge() {
 merge.expose = [];
 
 merge.schema = {
-	"title": "merge",
-	"description": "Merge multiple streams into one interleaved stream",
-	"properties": {
+	title: 'merge',
+	description: 'Merge multiple streams into one interleaved stream.',
+	properties: {
 	}
 };
 

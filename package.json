@@ -1,7 +1,7 @@
 {
   "name": "gulp-ccr-merge",
   "version": "0.1.0",
-  "description": "Cascading Configurable Gulp Recipe for gulp-chef that merge multiple streams into one interleaved stream.",
+  "description": "Merge multiple streams into one interleaved stream. A cascading configurable Gulp recipe for gulp-chef.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
