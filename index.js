@@ -2,26 +2,19 @@
 
 var helper = require('gulp-ccr-stream-helper')('merge');
 
-/**
- * Recipe:
- * 	Async Streams (from gulp.js cheatsheet p.2)
- *
- * Ingredients:
- * 	merge-stream
- *
- * Note:
- *  Some kind of stream version of gulp.parallel().
- *
- * @config 針對本 task 的 configuration。
- * @tasks 傳入的子 tasks 為 configurableTask，是尚未綁定 config 的 task 形式。
- *
- */
+var schema = {
+	title: 'merge',
+	description: 'Merge multiple streams into one interleaved stream.',
+	type: 'object',
+	properties: {
+	}
+};
+
 function merge() {
 	// lazy loading required modules.
 	var mergeStream = require('merge-stream');
 
 	var gulp = this.gulp;
-	var config = this.config;
 	var upstream = this.upstream;
 	var tasks = this.tasks;
 
@@ -38,22 +31,13 @@ function merge() {
 
 		context = {
 			gulp: gulp,
-			config: config,
+			config: {},
 			upstream: upstream
 		};
 		return helper.runTask(context, task);
 	}
 }
 
-merge.expose = [];
-
-merge.schema = {
-	title: 'merge',
-	description: 'Merge multiple streams into one interleaved stream.',
-	properties: {
-	}
-};
-
-merge.type = 'stream';
-
 module.exports = merge;
+module.exports.schema = schema;
+module.exports.type = 'stream';
